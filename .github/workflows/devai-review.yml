@@ -16,9 +16,12 @@ env:
 jobs:
   DevAI-Reviews:
     runs-on: ubuntu-latest
+
+    # Add "id-token" with the intended permissions.
     permissions:
       contents: 'read'
       id-token: 'write'
+      
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4

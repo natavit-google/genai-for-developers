@@ -36,7 +36,7 @@ jobs:
       - name: Authorize. with GCP 
         uses: 'google-github-actions/auth@v2'
         with:
-          credentials_json: '${{ secrets.GOOGLE_API_CREDENTIALS }}'
+          workload_identity_provider: '${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}'
           project_id: '${{ secrets.PROJECT_ID }}'
       # - name: Docs update with PR
       #   run: echo '## Docs Update Results 🚀' >> $GITHUB_STEP_SUMMARY
